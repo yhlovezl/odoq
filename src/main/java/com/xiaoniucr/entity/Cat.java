@@ -1,10 +1,12 @@
-package com.xiaoniucr.jdk8;
+package com.xiaoniucr.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Cat {
 
     private String name;
@@ -12,6 +14,7 @@ public class Cat {
     private Integer height;
 
     private Integer weight;
+
 
 
 

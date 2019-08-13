@@ -1,5 +1,7 @@
 package com.xiaoniucr.jdk8;
 
+import com.xiaoniucr.entity.Cat;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
