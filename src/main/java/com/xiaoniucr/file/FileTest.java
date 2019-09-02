@@ -12,7 +12,8 @@ public class FileTest {
 
     public static void main(String[] args) {
 
-        uploadFile(PATH,"test.docx");
+        String url = uploadFile(PATH,"test.docx");
+        System.out.println(url);
 
     }
 
@@ -27,7 +28,7 @@ public class FileTest {
         try {
             f.createNewFile();
             InputStream in = new FileInputStream(f);
-            IOUtils.copy(in,new FileOutputStream(PATH+File.separator+"test1.docx"));
+            IOUtils.copy(in,new FileOutputStream(PATH + File.separator+"test1.docx"));
         } catch (Exception e) {
             e.printStackTrace();
         }
