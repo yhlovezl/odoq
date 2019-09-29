@@ -28,14 +28,12 @@ public class FileTest {
         try {
             f.createNewFile();
             InputStream in = new FileInputStream(f);
+            f.delete();
             IOUtils.copy(in,new FileOutputStream(PATH + File.separator+"test1.docx"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return f.getName();
-
-
     }
 
 
