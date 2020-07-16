@@ -1,5 +1,7 @@
 package com.xiaoniucr.test.string;
 
+import java.io.*;
+
 /**
  * @author yanghl
  * @date 2019/9/21 16:04
@@ -8,16 +10,40 @@ public class StringFormat {
 
     public static void main(String[] args) {
 
-        //å¡«å……åˆ°å›ºå®šä¸‰ä½
-        String str = String.format(String.format("%03d",1));
-
-        //å¡«å……å­—ç¬¦
-        String s1 = String.format("%s","å“ˆå“ˆ");
-
-        //å¡«å……æ•°å­—
-        String s2 = String.format("%x",1);
+        //Ìî³äµ½¹Ì¶¨ÈıÎ»
 
 
+        // ¸ù¾İĞÂÎÅÂ·¾¶£¬¶ÁÈ¡ĞÂÎÅÎÄ¼şÄÚÈİ£¬ÏÔÊ¾ÔÚÒ³ÃæÉÏ
+        String thingPath = "D:\\11.txt";//»ñÈ¡ÎÄÕÂÂ·¾¶
 
+        // ¶ÁÈ¡ÎÄ¼şÄÚÈİ£¬Ğ´µ½StringÖĞ
+        int len = 0;
+        StringBuffer str = new StringBuffer("");
+        File file = new File(thingPath);
+        try {
+            FileInputStream is = new FileInputStream(file);
+            InputStreamReader isr = new InputStreamReader(is,"GBK");
+            BufferedReader in = new BufferedReader(isr);
+            String line = null;
+            while ((line = in.readLine()) != null)
+            {
+                if (len != 0) // ´¦Àí»»ĞĞ·ûµÄÎÊÌâ
+                {
+                    str.append(line);
+                }
+                else
+                {
+                    str.append(line);
+                }
+                len++;
+            }
+            in.close();
+            is.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String content=str.toString();//ÄÚÈİ
+        System.out.println("content:"+content);
     }
 }
