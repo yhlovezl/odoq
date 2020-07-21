@@ -16,7 +16,7 @@ public class LengthTest {
         System.out.println(deptName.length());
 
 
-        System.out.println("模版组需求整合（1.0.7,1.0.9,1.0.11,1.1.2,1.1.4,1.2.0）".length());
+        System.out.println("模版组需求整合");
 
 
         String userName = "";
